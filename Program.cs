@@ -81,7 +81,7 @@ class StudentGrades
             int lowest = grades [0, j];
             for (int i = 1; i < studentCount; i++)
             {
-                if (grade [i, j ] < lowest)
+                if (grades [i, j ] < lowest)
                 {
                     lowest = grades [i, j];
                 }
