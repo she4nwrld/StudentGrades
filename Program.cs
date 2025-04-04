@@ -79,30 +79,28 @@ class StudentGrades
         for (int j = 0; j < subjectCount; j++)
         {
             int lowest = grades [0, j];
-            for (int i = 1; i < studentCount; j++)
+            for (int i = 1; i < studentCount; i++)
             {
                 if (grade [i, j ] < lowest)
                 {
-                    lowest = grade;
+                    lowest = grades [i, j];
                 }
             }
             Console.WriteLine($"Subject {j + 1}: {lowest:F0}");
         }
     }
-    static void calculateSubjectMedians(int[,] grades)
+    static void CalculateSubjectMedians(int[,] grades)
     {
-        int studentCount = grades.GetLenght(0);
-        int subjectCount = grades.GetLenght(0);
+        int studentCount = grades.GetLength(0);
+        int subjectCount = grades.GetLength(1);
         for (int j = 0; j < subjectCount; j++)
         {
-            int[]
-                 subjectGrades = new int [studentCount];
+            int[] subjectGrades = new int [studentCount];
             for (int i = 0; i < studentCount; i++)
             {
                 subjectGrades[i] = grades[i, j];
             }
             Array.Sort(subjectGrades);
-
             double median;
             if (studentCount % 2 == 0)
             {
@@ -112,7 +110,7 @@ class StudentGrades
             {
                 median = subjectGrades[studentCount/2];
             }
-            Console.WriteLine($"Subject ( j + 1}; {median:F0}");
+            Console.WriteLine($"Subject { j + 1}; {median:F0}");
         }
     }
 }
