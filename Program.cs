@@ -74,14 +74,14 @@ class StudentGrades
     
     static void FindSubjectLowest(int[,] grades)
     {
-        int studentCount = grade.GetLength(0);
-        int subjectCount = grade.GetLength(1);
+        int studentCount = grades.GetLength(0);
+        int subjectCount = grades.GetLength(1);
         for (int j = 0; j < subjectCount; j++)
         {
-            int lowest = subjectGrades [0];
-            foreach (int grade in subjectGrades)
+            int lowest = grades [0, j];
+            for (int i = 1; i < studentCount; j++)
             {
-                if (grade < lowest)
+                if (grade [i, j ] < lowest)
                 {
                     lowest = grade;
                 }
