@@ -6,11 +6,11 @@ class StudentGrades
        
         int[,] grades = new int[5, 3]
         {
-          {85, 76, 88},  //S1
-          {78, 92, 84},  //S2
-          {94, 83, 91},  //S3
-          {81, 80, 96},  //S4
-          {80, 95, 90}   //S5
+          {83, 76, 75},  //S1
+          {77, 89, 78},  //S2
+          {90, 86, 92},  //S3
+          {84, 89, 95},  //S4
+          {93, 95, 91}   //S5
         };
         Console.WriteLine("Grades Matrix:\n");
         DisplayGradesMatrix(grades);
